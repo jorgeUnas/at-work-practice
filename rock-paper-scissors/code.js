@@ -96,7 +96,7 @@ images.forEach((image) => {
     
     //computer side
     const PC_selection = document.createElement('img');
-    PC_selection.setAttribute('src', `images/${computerSelection}.PNG`);
+    PC_selection.setAttribute('src', `images/${computerSelection}.svg`);
     PC_selection.setAttribute('width', '200px');
     PC_selection.setAttribute('height', '200px');
     /*PC_selection.textContent = `Computer said ${computerSelection}`;*/
@@ -113,6 +113,7 @@ images.forEach((image) => {
         gameResult.innerHTML = 'You lost the game 🙁';
         playerVictoriesNumber = 0;
         computerVictoriesNumber = 0;
+        
     }else if(playerVictoriesNumber === 5){
         scores.innerHTML = `Victories: ${playerVictoriesNumber}, Defeats: ${computerVictoriesNumber}`;        
         gameResult.innerHTML = 'You won the game 😀';

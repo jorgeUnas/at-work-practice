@@ -4,12 +4,13 @@
 }
 
 h1{
+    font-size: 40px;
     width: 80%;
     margin: 0px auto;
     font-family: monospace;
     text-align: center;
     text-shadow: 1px 1px 1px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 #container {
