@@ -1,7 +1,7 @@
 //https://aws.plainenglish.io/how-to-use-aws-cloud9-with-github-3136692fa44d
 
 // Buttons 
-const buttons = document.querySelectorAll('button');
+const images = document.querySelectorAll('img');
 // Div with result
 const divResult = document.querySelector('#divResult');
 
@@ -86,17 +86,22 @@ computerSelection = getComputerChoice();
 
 
 // sorting buttons
-buttons.forEach((button) => {
+images.forEach((image) => {
 
   // and for each one we add a 'click' listener
-  button.addEventListener('click', () => {
-    playerSelection = button.id;
+  image.addEventListener('click', () => {
+    playerSelection = image.id;
     divResult.innerHTML = '';
-    const paraResult = document.createElement('p');
-    paraResult.textContent = playRound(playerSelection, computerSelection);
-    divResult.appendChild(paraResult);
-    const PC_selection = document.createElement('h2')
-    PC_selection.textContent = `Computer said ${computerSelection}`;
+    const h2Result = document.createElement('h2');
+    h2Result.textContent = playRound(playerSelection, computerSelection);
+    divResult.appendChild(h2Result);
+    
+    //computer side
+    const PC_selection = document.createElement('img');
+    PC_selection.setAttribute('src', `images/${computerSelection}.PNG`);
+    PC_selection.setAttribute('width', '200px');
+    PC_selection.setAttribute('height', '200px');
+    /*PC_selection.textContent = `Computer said ${computerSelection}`;*/
     divResult.appendChild(PC_selection);
     
     
